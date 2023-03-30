@@ -8,5 +8,8 @@ node{
 	sh 'sudo docker image'
     }   
      
+    withCredentials([string(credentialsId: 'DOCKER_HUB_PASSWORD', variable: 'PASSWORD')]){   
+        sh 'sudo docker login -u nbpn123 -p 0848877500n'   
+    }   
       
 }
