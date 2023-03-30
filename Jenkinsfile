@@ -4,12 +4,12 @@ node{
     }
     stage("Docker build"){
 	sh 'whoami'
-	sh 'docker build -t nbpn123/nnguyen:v1 .'
-	sh 'docker image'
+	sh 'sudo docker build -t nbpn123/nnguyen:v1 .'
+	sh 'sudo docker image'
     }   
      
     withCredentials([string(credentialsId: 'DOCKER_HUB_PASSWORD', variable: 'PASSWORD')]){   
-        sh 'docker login -u nbpn123 -p 0848877500n'   
+        sh 'sudo docker login -u nbpn123 -p 0848877500n'   
     }   
       
 }
